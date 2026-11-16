@@ -5,20 +5,13 @@
       "lib": ["ES2022", "DOM"],
       "module": "ES2022",
       "target": "ES2022",
-  
       "strict": true,
       "esModuleInterop": true,
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true,
       "allowSyntheticDefaultImports": true,
-      "moduleResolution": "node",
-
       "sourceMap": true,
-      "outDir": "dist",
-      "baseUrl": ".",
-      "paths": {
-          "*": ["node_modules/*"]
-      }
+      "outDir": "dist"
     },
     "include": ["ts/*"],
     "exclude": ["node_modules"]

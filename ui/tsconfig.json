@@ -4,17 +4,19 @@
     "useDefineForClassFields": true,
     "module": "ESNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "strict": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "noEmit": false,
+    "noEmit": true,
     "noUnusedLocals": false,        // for development so we can leave variables unused
     "noUnusedParameters": false,    // for development so we can leave variables unused
     "noImplicitReturns": true,
     "skipLibCheck": true,
     "outDir": "dist",
+    "rootDir": "..",
+    "types": ["node"],
     //"outFile": "dist/bundle.js"
     // "noImplicitAny": true,
   },
