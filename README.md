@@ -1,7 +1,7 @@
 # Karl-Isis the 25001 - AI powered cocktail bot
 Source code for Cocktail Robot for Roboexotica 2023, see  [christianschueler.at/technologie/karl-isis-der-250100-ki-cocktail-bot/](https://christianschueler.at/technologie/karl-isis-der-250100-ki-cocktail-bot/)
 
-(c) 2023 Christian Schüler, [christianschueler.at](http://christianschueler.at/)
+(c) 2023-2026 Christian Schüler, [christianschueler.at](http://christianschueler.at/)
 
 Using TypeScript, Electron, Google Media Pipe (vision), Socket.IO, onoff and of course OpenAI API.
 
@@ -9,9 +9,14 @@ This is the main repo of the Karl-Isis the 25001 cocktail mixing robot.
 
 ### Prerequisites
 
-#### Dependencies
+#### Dependencies Windows
 
 *   [Node.js & NPM](https://www.npmjs.com/package/download)
+
+#### Dependencies Ubuntu Linux
+
+* https://nodejs.org/en/download -> Linux
+* ```sudo apt install build-essential curl -y```
 
 ### Installing
 
@@ -33,6 +38,12 @@ You might use npm run watch.
 ### Building on Raspberry Pi / Windows
 
 There is IngredientPump.ts and CocktailButtons.ts having import from either Gpio mock class or onoff. Uncomment onoff on Rasperry Pi. Uncomment Gpio.ts on Windows.
+
+TODO:
+```
+npm install-scripts approve epoll 
+npm run electron-rebuild
+```
 
 ### Running on NodeJS instead of Electron
 

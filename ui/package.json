@@ -1,24 +1,22 @@
 {
-  "name": "karl-isis-the-25001-ui",
-  "version": "1.1.0",
-  "description": "Karl-Isis the 25001 Cocktail Mixing Bot User Interface",
+  "name": "karl-isis-the-26001-ui",
+  "version": "2.0.0",
+  "description": "Karl-Isis the 26001 Cocktail Mixing Bot User Interface",
   "source": "src/index.ts",
   "main": "dist/bundle.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	  "build": "microbundle -i src/index.ts -o dist/bundle.js --no-pkg-main -f modern",
-    "watch": "microbundle -i src/index.ts -o dist/bundle.js --no-pkg-main -f modern --watch"
+    "build": "tsc --noEmit && esbuild src/index.ts --bundle --format=esm --target=es2022 --sourcemap --outfile=dist/bundle.js",
+    "watch": "esbuild src/index.ts --bundle --format=esm --target=es2022 --sourcemap --outfile=dist/bundle.js --watch"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-  },
   "devDependencies": {
-    "@mediapipe/tasks-vision": "*",
-	  "gsap": "*",
-    "microbundle": "*",
-    "typescript": "*",
-    "socket.io-client": "^4.7.2"
+    "@mediapipe/tasks-vision": "^1.2.3",
+    "esbuild": "^0.28.2",
+    "gsap": "^3.15.1",
+    "socket.io-client": "^4.8.4",
+    "typescript": "^7.0.2"
   }
 }

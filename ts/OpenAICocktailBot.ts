@@ -251,7 +251,7 @@ export class OpenAICocktailBot {
 
             // for new 2024 structured output system, make it quick and return
             if (this.aiSystem == AISystem.StructuredOutput2024) {
-                const parsedCompletion = await this.openAI.beta.chat.completions.parse(request);
+                const parsedCompletion = await this.openAI.chat.completions.parse(request);
                 parsedRecipe = parsedCompletion.choices[0].message.parsed as unknown as CocktailRecipe;
 
                 if (global.debug) console.log("parsed recipe:", parsedRecipe);
